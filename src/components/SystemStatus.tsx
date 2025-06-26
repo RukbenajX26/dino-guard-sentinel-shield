@@ -3,7 +3,8 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { Shield, Clock, AlertTriangle, CheckCircle, Zap, Activity } from 'lucide-react';
+import { Clock, AlertTriangle, CheckCircle, Zap, Activity } from 'lucide-react';
+import { DinosaurIcon } from './DinosaurIcons';
 
 interface SystemStatusProps {
   status: {
@@ -21,7 +22,7 @@ const SystemStatus: React.FC<SystemStatusProps> = ({ status }) => {
       <Card className="bg-slate-800/50 backdrop-blur-sm border-amber-200/20">
         <CardHeader>
           <CardTitle className="text-amber-100 flex items-center gap-2">
-            <Shield className="w-5 h-5 text-emerald-400" />
+            <DinosaurIcon type="triceratops" className="w-5 h-5 text-emerald-400" />
             System Protection Status
           </CardTitle>
         </CardHeader>
@@ -52,7 +53,7 @@ const SystemStatus: React.FC<SystemStatusProps> = ({ status }) => {
           <div className="grid grid-cols-3 gap-4">
             <div className="text-center p-4 bg-slate-700/50 rounded-lg">
               <div className="flex items-center justify-center mb-2">
-                <AlertTriangle className="w-6 h-6 text-red-400" />
+                <DinosaurIcon type="trex" className="w-6 h-6 text-red-400" />
               </div>
               <div className="text-2xl font-bold text-red-300">{status.threatsBlocked}</div>
               <div className="text-sm text-slate-400">Threats Blocked</div>
@@ -66,7 +67,7 @@ const SystemStatus: React.FC<SystemStatusProps> = ({ status }) => {
             </div>
             <div className="text-center p-4 bg-slate-700/50 rounded-lg">
               <div className="flex items-center justify-center mb-2">
-                <CheckCircle className="w-6 h-6 text-emerald-400" />
+                <DinosaurIcon type="brontosaurus" className="w-6 h-6 text-emerald-400" />
               </div>
               <div className="text-2xl font-bold text-emerald-300">Safe</div>
               <div className="text-sm text-slate-400">Status</div>
@@ -79,21 +80,21 @@ const SystemStatus: React.FC<SystemStatusProps> = ({ status }) => {
       <div className="grid grid-cols-3 gap-4">
         <Card className="bg-gradient-to-br from-amber-500/20 to-amber-600/20 border-amber-400/30 hover:from-amber-500/30 hover:to-amber-600/30 transition-all cursor-pointer">
           <CardContent className="p-4 text-center">
-            <Zap className="w-8 h-8 text-amber-300 mx-auto mb-2" />
+            <DinosaurIcon type="raptor" className="w-8 h-8 text-amber-300 mx-auto mb-2" />
             <div className="text-amber-100 font-semibold">Quick Scan</div>
             <div className="text-amber-300 text-sm">~2 minutes</div>
           </CardContent>
         </Card>
         <Card className="bg-gradient-to-br from-teal-500/20 to-teal-600/20 border-teal-400/30 hover:from-teal-500/30 hover:to-teal-600/30 transition-all cursor-pointer">
           <CardContent className="p-4 text-center">
-            <Activity className="w-8 h-8 text-teal-300 mx-auto mb-2" />
+            <DinosaurIcon type="stegosaurus" className="w-8 h-8 text-teal-300 mx-auto mb-2" />
             <div className="text-teal-100 font-semibold">Full Scan</div>
             <div className="text-teal-300 text-sm">~45 minutes</div>
           </CardContent>
         </Card>
         <Card className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-400/30 hover:from-purple-500/30 hover:to-purple-600/30 transition-all cursor-pointer">
           <CardContent className="p-4 text-center">
-            <Shield className="w-8 h-8 text-purple-300 mx-auto mb-2" />
+            <DinosaurIcon type="pteranodon" className="w-8 h-8 text-purple-300 mx-auto mb-2" />
             <div className="text-purple-100 font-semibold">Deep Scan</div>
             <div className="text-purple-300 text-sm">~2 hours</div>
           </CardContent>
