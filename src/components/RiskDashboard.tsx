@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { AlertTriangle, Shield, Virus, Bug, Wifi, Lock } from 'lucide-react';
+import { AlertTriangle, Shield, Bug, Wifi, Lock } from 'lucide-react';
 
 interface RiskDashboardProps {
   detailed?: boolean;
@@ -11,7 +10,7 @@ interface RiskDashboardProps {
 
 const RiskDashboard: React.FC<RiskDashboardProps> = ({ detailed = false }) => {
   const threats = [
-    { name: 'Malware', count: 0, risk: 'Low', icon: Virus, color: 'emerald' },
+    { name: 'Malware', count: 0, risk: 'Low', icon: Bug, color: 'emerald' },
     { name: 'Trojans', count: 2, risk: 'High', icon: Bug, color: 'red' },
     { name: 'Network Intrusions', count: 1, risk: 'Medium', icon: Wifi, color: 'yellow' },
     { name: 'Ransomware', count: 0, risk: 'Low', icon: Lock, color: 'emerald' }
